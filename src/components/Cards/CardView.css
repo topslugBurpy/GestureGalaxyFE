@@ -1,0 +1,23 @@
+.App {
+    height: 100%;
+    width: 100%;
+    display : flex;
+    align-items: flex-start;
+    justify-content:center;
+    background-color: #26355D;
+    margin-top: 100px;
+    /* overflow-y: auto; */
+    /* margin-bottom: 20px; Added to shift the whole thing down */
+  }
+
+  .col {
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* Corrected from 'flex' to 'center' */
+    justify-content: top; /* Added for vertical centering */
+    padding: 50px;
+  }
