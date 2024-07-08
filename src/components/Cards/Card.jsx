@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 
 import "./Card.css";
 
@@ -9,10 +10,12 @@ export const Card = ({
   description,
   buttonText,
   link,
+  quitLink,
 }) => {
   const [isClicked, setIsClicked] = useState(false);
 
   const handleClick = () => {
+    event.preventDefault();
     setIsClicked(!isClicked);
   };
 
@@ -29,9 +32,9 @@ export const Card = ({
         </a>
       )}
       {isClicked && (
-        <button className="card-btn-quit" onClick={handleClick}>
+        <a className="card-btn-quit" onClick={handleClick} href={quitLink}>
           Quit
-        </button>
+        </a>
       )}
     </div>
   );
