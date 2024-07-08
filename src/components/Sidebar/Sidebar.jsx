@@ -1,22 +1,26 @@
-import React from 'react'
-import './Sidebar.css'
-import {assets} from '../../assets/assets'
-
+import React from "react";
+import "./Sidebar.css";
+import { assets } from "../../assets/assets";
 
 const Sidebar = () => {
-
-    const [extended, setExtended] = React.useState(false)
+  const [extended, setExtended] = React.useState(false);
   return (
-    <div className='sidebar'>
-        <div className="top">
-            <img onClick = {()=>setExtended(prev=>!prev)} className='menu' src={assets.menu_icon} alt="" />
-            <div className='new-chat'>
-                <img src={assets.plus_icon} alt="" />
-                {extended ? <p>New Game</p>: null}
-            </div>
-           
+    <div className="sidebar">
+      <div className="top">
+        <img
+          onClick={() => setExtended((prev) => !prev)}
+          className="menu"
+          src={assets.menu_icon}
+          alt=""
+        />
+        <div className="new-chat">
+          <img src={assets.plus_icon} alt="" />
+          {extended ? <p>New Game</p> : null}
         </div>
-        <div className="bottom">
+      </div>
+      {/* 
+        DONT KNOW WHY WE HAVE THESE BUTTONS ?
+      <div className="bottom">
             <div className='bottom-item recent-entry'>
                 <img src={assets.question_icon} alt="" />
                 {extended? <span className='activitybox'> Help</span> : null}
@@ -30,9 +34,9 @@ const Sidebar = () => {
                 {extended ? <span className='activitybox'> Settings</span>: null}
             </div>
 
-        </div>
+        </div> */}
     </div>
-  )
-}
+  );
+};
 
-export default Sidebar
+export default Sidebar;
